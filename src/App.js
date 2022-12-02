@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { Calculator } from './components/calculator/Calculator';
+import { Head } from './components/head/Head';
+import { SessionTime } from './components/sessionTime/SessionTime';
 
 function App() {
+  const [timeCalculator, SetTimeCalculator] = useState(true);
+  const [sessionTime, SetSessionTime] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Head
+        timeCalculator={timeCalculator}
+        SetTimeCalculator={SetTimeCalculator}
+        SetSessionTime={SetSessionTime}
+        sessionTime={sessionTime}
+      />
+
+      {
+        (sessionTime) && <SessionTime />
+      }
+      {
+        (timeCalculator) && <Calculator />
+      }
     </div>
   );
 }

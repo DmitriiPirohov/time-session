@@ -1,0 +1,56 @@
+.container {
+  width: 310px;
+  height: 85px;
+  margin: 0 auto;
+
+  border: 1px solid white;
+  border-radius: 8px;
+
+  &__input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+
+  }
+}
+
+.sessionTime {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  gap: 5px;
+
+  &__button{
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    align-items: center;
+
+    border: 1px solid white;
+    border-radius: 8px;
+
+    cursor: pointer;
+  }
+
+  &__number {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 5px;
+  }
+}
+
+.press{
+    background-color: white;
+}
+
+.input-time{
+  width: 38px;
+}

@@ -1,0 +1,25 @@
+.Head {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+
+  gap: 15px;
+
+  &__button {
+    width: 150px;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+
+    border: 1px solid white;
+    border-radius: 8px;
+
+    cursor: pointer;
+  }
+}
+
+.active {
+  background-color: white;
+}
